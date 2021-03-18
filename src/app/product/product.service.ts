@@ -1,0 +1,97 @@
+import { Injectable } from '@angular/core';
+import {Product} from './product.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+  private products: Product[] = [
+    new Product(
+      1,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty5/product/media/images/20200628/21/3598953/75329303/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      2,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty6/product/media/images/20200623/18/3415938/75010537/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      3,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty5/product/media/images/20200628/21/3598953/75329303/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      4,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty6/product/media/images/20200623/18/3415938/75010537/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      5,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty5/product/media/images/20200628/21/3598953/75329303/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      6,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty6/product/media/images/20200623/18/3415938/75010537/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      7,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty6/product/media/images/20200623/18/3415938/75010537/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      8,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty6/product/media/images/20200623/18/3415938/75010537/1/1_org_zoom.jpg'
+    ),
+    new Product(
+      9,
+      'Polo T-shirt',
+      'newly styled t-shirt',
+      23,
+      'AVVA',
+      'https://cdn.dsmcdn.com/ty6/product/media/images/20200623/18/3415938/75010537/1/1_org_zoom.jpg'
+    ),
+  ];
+
+  constructor() { }
+
+  getProducts() {
+    return this.products.slice();
+  }
+
+  getProduct(selectedId: number) {
+    const product = this.products.find(
+      (pro) => {
+        return pro.id === selectedId;
+      }
+    )
+    return product;
+  }
+}
