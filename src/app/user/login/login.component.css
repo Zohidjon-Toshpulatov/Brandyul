@@ -1,0 +1,26 @@
+.loginbox{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+}
+
+.textbox{
+  color: #706e6e;
+}
+
+form{
+  width: 85%;
+}
+
+form>button.btn{
+  background: #ff5516;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}

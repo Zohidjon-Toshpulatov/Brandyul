@@ -1,0 +1,16 @@
+<div class="contanier py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="address">Enter Your Address: </label>
+          <textarea id="address" class="form-control" formControlName="delivery_address" required></textarea>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="submit" class="btn btn-success" [disabled]="addressForm.invalid">Send</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

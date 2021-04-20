@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="textbox text-center">
+        <h1>Hello,</h1>
+        <h5>Register To BrandYuL, do not miss the discounts</h5>
+      </div>
+      <div class="loginbox" *ngIf="registerForm">
+        <form class="py-5 mx-auto" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Username*</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="username"
+              required>
+            <small class="text-danger"
+                   *ngIf="username?.errors?.required && (username?.dirty || username?.touched)">Name is required</small>
+
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+              email>
+            <small class="text-danger"
+                   *ngIf="email?.errors?.required && (email?.touched || email?.dirty)">Email is required</small>
+          </div>
+          <div class="form-group">
+            <label for="address">Address*</label>
+            <textarea type="text" class="form-control" id="address" formControlName='address'></textarea>
+            <small class="text-danger"
+                   *ngIf="address?.errors?.required && (address?.touched || address?.dirty)">Address is required</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password*</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              formControlName="password"
+              required minlength="8">
+            <small class="text-danger"
+                   *ngIf="password?.errors?.required && (password?.touched || password?.dirty)">Password is required</small>
+          </div>
+          <button
+            class="btn form-control"
+            type="submit"
+            [disabled]="!registerForm.valid">Register</button>
+          <div class="form-group my-3 text-center">
+            <p>You have already had an account.
+              <a
+                routerLink="/login"
+                style="cursor: pointer; color: #ff5516;">Login Here</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

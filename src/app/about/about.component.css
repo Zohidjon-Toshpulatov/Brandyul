@@ -1,0 +1,49 @@
+.header {
+  position: relative;
+  margin: 0 auto;
+  min-height: 560px;
+  width: 100%;
+}
+
+.bg-img{
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-size: cover;
+  background: url('../../assets/people.png') no-repeat 50%;
+
+}
+
+.header .header-info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4588235294117647);
+}
+
+.header-info div{
+  text-align: center;
+}
+
+
+.header-info-slogan {
+  color: white;
+  font-size: 80px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.header-info-desc {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
